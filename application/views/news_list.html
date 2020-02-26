@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表</title>
+</head>
+<body>
+	<table border="1">
+		<thead>
+			<tr>
+				<td>id</td>
+				<td>标题</td>
+				<td>作者</td>
+				<td>内容</td>
+				<td>操作</td>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach($news_list as $item):?>
+			<tr>
+				<td><?=$item['id']?></td>
+				<td><?=$item['title']?></td>
+				<td><?=$item['author']?></td>
+				<td><?=$item['content']?></td>
+				<td><a href="<?=site_url('news/del/'.$item['id'])?>">删除</a></td>
+			</tr>
+			<?php endforeach;?>
+		</tbody>
+	</table>
+</body>
+</html>

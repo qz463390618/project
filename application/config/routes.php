@@ -59,3 +59,4 @@ $route['demo/abc'] = 'demo/test';
 $route['news/add'] = 'news/showAdd';
 $route['news/doAdd'] = 'news/doAdd';
 $route['news/list']='news/newsList';
+$route['news/del/(:num)']='news/delNews/$1';
